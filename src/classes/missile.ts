@@ -12,7 +12,7 @@ export class Missile extends Actor {
 
 		this.setActive(true);
 		this.setVisible(true);
-		this.setVelocityY(-300);
+		this.setVelocityY(-400);
 	}
 
 	preUpdate(time: number, delta: number): void {

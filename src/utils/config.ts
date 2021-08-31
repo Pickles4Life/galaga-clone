@@ -1,15 +1,15 @@
 import { Types } from 'phaser';
 import { LoadingScene, MainScene } from '../scenes';
-import sizeChanged from './sizeChanged';
 
 const gameConfig: Types.Core.GameConfig = {
 	title: 'Galaga',
 	type: Phaser.WEBGL,
 	parent: 'game',
+	width: 800,
+	height: 600,
 	scale: {
-		mode: Phaser.Scale.ScaleModes.NONE,
-		width: window.innerWidth,
-		height: window.innerHeight,
+		mode: Phaser.Scale.FIT,
+		autoCenter: Phaser.Scale.CENTER_BOTH,
 	},
 	physics: {
 		default: 'arcade',
@@ -18,13 +18,7 @@ const gameConfig: Types.Core.GameConfig = {
 			debugShowBody: true,
 		},
 	},
-	callbacks: {
-		postBoot: () => {
-			sizeChanged();
-		},
-	},
 	autoFocus: true,
-	canvasStyle: `display: block; width: 100%; height: 100%;`,
 	scene: [LoadingScene, MainScene],
 };
 
