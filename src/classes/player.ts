@@ -12,7 +12,7 @@ export class Player extends Actor {
 		this.keyA = this.scene.input.keyboard.addKey('A');
 		this.keyD = this.scene.input.keyboard.addKey('D');
 
-		this.setScale(0.15);
+		this.setScale(0.05);
 		this.getBody().setSize(550, 650);
 		this.getBody().setOffset(300, 175);
 	}

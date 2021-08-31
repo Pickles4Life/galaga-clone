@@ -9,6 +9,7 @@ export class LoadingScene extends Scene {
 		this.load.baseURL = 'assets/';
 		this.load.image('ship', 'sprites/ship.png');
 		this.load.image('player_missile', 'sprites/player_missile.png');
+		this.load.image('base_enemy', 'sprites/base_enemy.png');
 	}
 
 	create(): void {

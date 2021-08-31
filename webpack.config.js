@@ -81,7 +81,7 @@ const config = {
 		new HtmlWebpackPlugin({
 			template: 'index.html',
 			inject: true,
-			title: 'Phaser Webpack Template',
+			title: 'Space Shooter',
 			appMountId: 'app',
 			filename: 'index.html',
 			inlineSource: '.(js|css)$',

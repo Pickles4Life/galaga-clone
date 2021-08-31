@@ -14,8 +14,8 @@ const gameConfig: Types.Core.GameConfig = {
 	physics: {
 		default: 'arcade',
 		arcade: {
-			debug: true,
-			debugShowBody: true,
+			//debug: true,
+			//debugShowBody: true,
 		},
 	},
 	autoFocus: true,
