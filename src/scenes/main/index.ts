@@ -1,14 +1,13 @@
-import { GameObjects, Math, Scene } from 'phaser';
-import { kill } from 'process';
-import { BaseEnemy } from 'src/classes/baseEnemy';
-import { Missile } from 'src/classes/missile';
+import { Math, Scene } from 'phaser';
+import { BaseEnemy } from '../../classes/baseEnemy';
+import { Missile } from '../../classes/missile';
+import { PlayerMissiles } from '../../classes/playerMissiles';
 import { BaseEnemies } from '../../classes/baseEnemies';
-import { Missiles } from '../../classes/missiles';
 import { Player } from '../../classes/player';
 
 export class MainScene extends Scene {
 	private player!: Player;
-	private missiles!: Missiles;
+	private playerMissiles!: PlayerMissiles;
 	private baseEnemies!: BaseEnemies;
 
 	constructor() {
@@ -16,7 +15,7 @@ export class MainScene extends Scene {
 	}
 
 	create(): void {
-		this.missiles = new Missiles(this);
+		this.playerMissiles = new PlayerMissiles(this);
 		this.baseEnemies = new BaseEnemies(this);
 
 		this.player = new Player(
@@ -26,11 +25,11 @@ export class MainScene extends Scene {
 		);
 
 		this.input.on('pointerdown', () => {
-			this.missiles.fireMissile(this.player.x, this.player.y);
+			this.playerMissiles.fireMissile(this.player.x, this.player.y);
 		});
 
 		this.physics.add.overlap(
-			this.missiles,
+			this.playerMissiles,
 			this.baseEnemies,
 			(missile, enemy) => {
 				this.baseEnemies.killEnemy(enemy as BaseEnemy, missile as Missile);
