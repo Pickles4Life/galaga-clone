@@ -1,4 +1,4 @@
-import { Actor } from './actor';
+import { Actor } from '../actor';
 
 export class Missile extends Actor {
 	constructor(scene: Phaser.Scene, x: number, y: number, texture: string) {
@@ -10,7 +10,6 @@ export class Missile extends Actor {
 
 		this.setActive(true);
 		this.setVisible(true);
-		this.setVelocityY(-400);
 	}
 
 	destroySelf(): void {

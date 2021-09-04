@@ -1,5 +1,5 @@
 import { Types } from 'phaser';
-import { LoadingScene, MainScene } from '../scenes';
+import { GameoverScene, LoadingScene, MainScene } from '../scenes';
 
 const gameConfig: Types.Core.GameConfig = {
 	title: 'Galaga',
@@ -19,7 +19,7 @@ const gameConfig: Types.Core.GameConfig = {
 		},
 	},
 	autoFocus: true,
-	scene: [LoadingScene, MainScene],
+	scene: [LoadingScene, MainScene, GameoverScene],
 };
 
 export default gameConfig;

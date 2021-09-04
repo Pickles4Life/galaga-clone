@@ -1,6 +1,6 @@
 import { BaseEnemy } from './baseEnemy';
-import { Math } from 'phaser';
-import { Missile } from './missile';
+import { MainScene } from 'src/scenes';
+import { PlayerMissile } from '../projectiles/player/playerMissile';
 
 export class BaseEnemies extends Phaser.Physics.Arcade.Group {
 	constructor(scene: Phaser.Scene) {
@@ -23,10 +23,11 @@ export class BaseEnemies extends Phaser.Physics.Arcade.Group {
 		}
 	}
 
-	killEnemy(enemy: BaseEnemy, missile: Missile): void {
+	killEnemy(enemy: BaseEnemy, missile: PlayerMissile): void {
 		if (missile.active && enemy.active) {
 			enemy.killSelf();
 			missile.destroySelf();
+			(this.scene as MainScene).incrementScore(1);
 		}
 	}
 }

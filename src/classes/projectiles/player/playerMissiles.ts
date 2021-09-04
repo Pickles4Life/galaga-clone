@@ -1,4 +1,4 @@
-import { Missiles } from './missiles';
+import { Missiles } from '../missiles';
 import { PlayerMissile } from './playerMissile';
 
 export class PlayerMissiles extends Missiles {

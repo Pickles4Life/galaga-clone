@@ -3,8 +3,12 @@ import { Enemy } from './enemy';
 
 export class BaseEnemy extends Enemy {
 	private targetPos!: Phaser.Math.Vector2;
+
+	isShooting: boolean;
+
 	constructor(scene: Phaser.Scene, x: number, y: number) {
 		super(scene, x, y, 'base_enemy');
+		this.isShooting = false;
 	}
 
 	spawn(x: number, y: number): void {

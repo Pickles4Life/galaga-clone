@@ -10,6 +10,7 @@ export class LoadingScene extends Scene {
 		this.load.image('ship', 'sprites/ship.png');
 		this.load.image('player_missile', 'sprites/player_missile.png');
 		this.load.image('base_enemy', 'sprites/base_enemy.png');
+		this.load.image('enemy_missile', 'sprites/enemy_missile.png');
 	}
 
 	create(): void {

@@ -1,6 +1,6 @@
 import { MainScene } from 'src/scenes';
 import { Actor } from './actor';
-import { Missiles } from './missiles';
+import { EnemyMissile } from './projectiles/enemy/enemyMissile';
 
 export class Player extends Actor {
 	private keyA: Phaser.Input.Keyboard.Key;
